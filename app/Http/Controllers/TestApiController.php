@@ -20,7 +20,7 @@ class TestApiController extends Controller
             $body=json_decode($response->body());
             foreach ($body as $item){
                 try {
-                    DB::table('images')->insert([
+                    DB::table('photos')->insert([
                         'title'=>$item->title,
                         'url'=>$item->url,
                         'thumbnailUrl'=>$item->thumbnailUrl,
